@@ -21,24 +21,14 @@ I started the NOC Thoughts blog as a way to give back to the IT community, blogg
 
 ## Certifications
 
-CCNA/P Voice (now) Collaboration
+[CCNP Collaboration](https://www.youracclaim.com/badges/2d279524-027b-4122-9464-4f0a7c8ff84a/public_url)
 
-https://www.youracclaim.com/badges/2d279524-027b-4122-9464-4f0a7c8ff84a/public_url
+[CCNP Data Center](https://www.youracclaim.com/badges/356da7c5-47f9-42c9-b5c8-749304d57b01/public_url)
 
-CCNA/P Data Center
+[CCNA Route/Switch](https://www.youracclaim.com/badges/2675a7a1-f8c0-49b7-a070-5d315238d3c3/public_url)
 
-https://www.youracclaim.com/badges/356da7c5-47f9-42c9-b5c8-749304d57b01/public_url
+[CCNA Wireless](https://www.youracclaim.com/badges/ce199e29-b5c9-49e5-bd40-c68c2765a4bd/public_url)
 
-CCNA Route/Switch
+[VMWare VCP-DCV6](https://www.youracclaim.com/badges/e4dab60b-1d69-49fb-b63f-50ddad56a1d7/public_url)
 
-https://www.youracclaim.com/badges/2675a7a1-f8c0-49b7-a070-5d315238d3c3/public_url
-
-CCNA Wireless
-
-https://www.youracclaim.com/badges/ce199e29-b5c9-49e5-bd40-c68c2765a4bd/public_url
-
-VMWare VCP-DCV6
-
-https://www.youracclaim.com/badges/e4dab60b-1d69-49fb-b63f-50ddad56a1d7/public_url
-
-AudioCodes Associate - E-SBC
+[AudioCodes Associate - E-SBC](https://www.linkedin.com/in/kperryuc/)
