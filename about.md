@@ -1,27 +1,44 @@
 ---
 layout: page
-title: Jekyll Theme - About - Massively
-description: When building a website it's helpful to see what the focus of your site is. This page is an example of how to show a website's focus.
+title: About - NOC Thoughts
+description: About the Author
 sitemap:
     priority: 0.7
     lastmod: 2017-11-02
     changefreq: weekly
 ---
-## About our Site
+## About Me
 
-<span class="image left"><img src="{{ "/images/pic04.jpg" | absolute_url }}" alt="" /></span>
+<span class="image left"><img src="{{ "/images/me.jpg" | absolute_url }}" alt="" /></span>
 
-Making steady content and conveying it well takes a great deal of research and, hence, time and exertion. Building a profound established comprehension of your target customer needs is critical as your principle objective ought to be to fulfill their requirements as awesome content. You should need to enhance their lives. Having significant content like this may not be simple by any methods. Be that as it may, in any case, it's a fundamental apparatus in the event that you expect to grow a fruitful and supportable business in the present web focused world.
+Hey there! If you’re here you must be curious about who I am and what I do, right? Well, my name is Ken Perry and I function as a Senior UC Engineer (Level 3) at a Managed Services Provider, Optanix. Through my UC Journey thus far I have functioned as a front line Service Desk engineer (with all the glory that entails), a Senior UC Engineer focusing on supporting/administrating/maintaining Cisco UC deployments including UCM, CUC, CER, IM&P, UCCX, IOS Gateways/VGs, CUBE, ESXi Hypervisor, Cisco UCS-C/B/E, UCSM and UCS Central, Unified SIP Proxy and more, typically in 20+ separate environments on a weekly basis. It can get crazy. I have also functioned as a “Day 1” implementation engineer building out “pilot” or “proof of concept” environments, including creating documentation and how-to training videos.
 
-Receiving the benefits of content is a certain something. Be that as it may, it's so substantially less demanding once you begin conveying all the more successfully. The profitable content thought isn't just about bragging your item's capacities and general worth or your organization's achievements. You should concentrate less on advertising how awesome your item is and rather concentrate on indicating how valuable it is. This is a client focused approach as it concentrates on their issues and your answer for them. Making yourself fundamental is critical.
+During my time as a Senior UC engineer I have also had the pleasure of training multiple engineers in UC & Data Center technologies, Case Management best practices and general business process related to Day 2 Support.
 
-### Content is Imortant
-<div class="box">
-  <p>
-  In saying that, a one-measure fits-all approach won't do the trick with regards to content promoting. Rather, an emphasis on making remarkable, high caliber and totally genuine content that is engaging, helpful and fascinating for customers will get you the crown. From content, video and symbolism to infographics, studies, online courses and podcasts, whatever your favored content medium is, guarantee it is shareable and pertinent to your industry.
-  </p>
-</div>
+On the personal side I am a father to my son, Max, husband to my Anthropologist & Activist wife Chelsie, and feeder + poop picker upper to our animals Harley (Beagle), Thor & Loki (cats). My son was the inspiration for one of my side projects — scripting in Python. When he asked me “Dad, how do you learn how to code?” at the age of 5, I didn’t really have a good answer… but I told him that I would learn a language or two and do my best to teach him as he grew to see if it’s something he’d be into. Thus work on my UC Automation scripts started, which are now held on my GitHub page. The easiest entry point for coding (for me) is relevance. I also enjoy MMORPG video games, Dungeons & Dragons (when I can find a group), camping, going for walks throughout the neighborhood and on various nature trails/parks, and my blog to name a few things.
 
-<span class="image left"><img src="{{ "/images/pic05.jpg" | absolute_url }}" alt="" /></span>
+I started the NOC Thoughts blog as a way to give back to the IT community, bloggers, and folks that helped me along my way as well. Whether it was command syntax, use cases, informational posts or the occasionally necro’d thread on Cisco Support Forums holding the ever-so-important correct answer, I learned and gained a lot from the free flow of information from one engineer to another, and I want to be a part of that beautiful process.
 
-On social media, we may share our own thoughts and advance our image notwithstanding spreading musings for different associations and affiliations. With such a critical number of associations with people and relationship on social media, our experience can be over-burden with a considerable measure of information.
+## Certifications
+
+CCNA/P Voice (now) Collaboration
+
+https://www.youracclaim.com/badges/2d279524-027b-4122-9464-4f0a7c8ff84a/public_url
+
+CCNA/P Data Center
+
+https://www.youracclaim.com/badges/356da7c5-47f9-42c9-b5c8-749304d57b01/public_url
+
+CCNA Route/Switch
+
+https://www.youracclaim.com/badges/2675a7a1-f8c0-49b7-a070-5d315238d3c3/public_url
+
+CCNA Wireless
+
+https://www.youracclaim.com/badges/ce199e29-b5c9-49e5-bd40-c68c2765a4bd/public_url
+
+VMWare VCP-DCV6
+
+https://www.youracclaim.com/badges/e4dab60b-1d69-49fb-b63f-50ddad56a1d7/public_url
+
+AudioCodes Associate - E-SBC
