@@ -31,7 +31,7 @@ So let’s get into the changes. As always, the script is available on my [GitHu
 
 5) When successfully completed, prior to sleeping, the data is emailed out for review.
 
-```python{.line-numbers}
+{% highlight Python linenos %}
 #
 # Script created by Ken Perry
 # Script purpose is to verify memory util on Expressway Servers
@@ -119,7 +119,7 @@ while True:
         # os.system('mail -s "Script Stopped" email@domain.com')
     finally:
         time.sleep(43200)
-```
+{% endhighlight %}
 
 ## Things to know
 
