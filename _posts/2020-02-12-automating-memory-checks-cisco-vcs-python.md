@@ -12,13 +12,13 @@ I’ll start by recapping the issue. On certain versions of VCS/Expressway x8.#.
 
 But as we all know these things take time, whether it’s budgetary constraints, slow moving approval processes, you name it. So in the meantime we end up needing to perform proactive regular reboots. To help limit the reboots to “only when they’re needed” I stumbled upon the following [Cisco Support Forum Post](https://community.cisco.com/t5/telepresence-and-video/expressway-memory-usage/td-p/3743732) in which it is explained that the SNMP OID of .1.3.6.1.2.1.25.2.2.0 returns the physical memory size of the system, and rough memory usage can be calculated by using the values of OIDs 1.3.6.1.2.1.25.2.3.1.6.1 (hrStorageUsed) and 1.3.6.1.2.1.25.2.3.1.5.1 (hrStorageSize) and calculating usage: (hrStorageUsed/hrStorageSize)x100. However, VCS/Expressway also utilizes SWAP which is not reported there.
 
-So what we did was, first identify the command provided in the post that can allow us to monitor committed memory: “cat /proc/meminfo | grep Committed_AS”, then poll the server using this command right up until we see it go unresponsive again, dial it back a bit and decide “This is when we should reboot”. For us, that was 6.5GB memory showing under the above command output. This helps, but we still had the requirement of logging into the environment to validate these values across an entire Expressway cluster. 
+So what we did was, first identify the command provided in the post that can allow us to monitor committed memory: “cat /proc/meminfo" and look for the "Committed_AS" value. Optionally you can use a pipe then "grep Committed_AS" to only see that value. Next is to poll the server using this command right up until we see it go unresponsive again, dial it back a bit and decide “This is when we should reboot”. For us, that was 6.5GB memory showing under the above command output. This helps, but we still had the requirement of logging into the environment to validate these values across an entire Expressway cluster. 
 
 This is where my initial script came in, we still had to log in but the data collection was sped up. It helps, but isn’t as efficient as it could be. This is where the true “automation” takes place. Utilizing a Linux machine with SMTP set up and the “mail” command available, we are able to collect the data to a timestamped file and store it for the long term (in case we miss a required reboot we can see when it was identified as “above the threshold” and who was responsible for missing it if necessary), as well as notification of the output being collected via email. The script loops, sleeping for 12 hours before running again. Though the script hasn’t hit an exception, I do expect an email out to indicate an exception was hit if it happens. Through the email notifications we are able to drive down the required time to review the output and respond to the client of “everything checks out” or “we need to reboot X node, when can this be done?” to about 2 minutes, provided you don’t type like a hen pecking at grain on the ground — one finger, one letter at a time. 
 
 So let’s get into the changes. As always, the script is available on my [GitHub](https://github.com/Unhall0w3d/mind-enigma/blob/master/expresswayMemoryCheck.py) - as well as the [ReadMe](https://github.com/Unhall0w3d/mind-enigma/blob/master/expresswayMemoryCheck_ReadMe.txt). Do note that there are commented out lines (explained in the ReadMe file) that allow for email notification provided the pre-requisites are set up. I do not cover these, but please ensure that the command “mail -s email@domain.com < test.txt” works, wherein the test.txt file should be in the same directory you are initiating the email from, and contain some data such as “This is a test”. 
 
-# Important Points
+## Important Points
 
 1) We now append to a generic “ExpresswayHC.txt” file and, once all data is collected, we email the file, copy it (to change the name to include the timestamp), then delete the original file. This prevents us from sending old data in the email and having an ever-growing list of output.
 
@@ -124,23 +124,23 @@ while True:
 
 I'd like to provide some data from the ReadMe for those that are not native Linux users, in my example we’ll need to use “Screen” to keep the script running 24/7 without being connected to the Linux terminal, but still be able to access and stop/rerun the script as needed. If you require invoking a virtual environment before running the script, we account for that, or, you can run the script directly if you so choose. Once the script is invoked it will prompt for Username/Password and should report back shortly that an email was sent. As mentioned in the ReadMe, if this check is something you need to do due to the bug, it’s likely you’ll need to check it regularly and this is where the script really shines.
 
-# How To Run:
+### How To Run
 
 If you require invoking a virtual environment you likely already know how to do this, however, to run this script in a Screen and detatch after providing required input, do the below:
 
-# Run Directly
+### Run Directly
 
     screen bash -c 'python expresswayMemoryCheck.py'
 
-# Invoke venv and run (edit as needed)
+### Invoke venv and run (edit as needed)
 
     screen bash -c 'cd /home/user/foldercontainingvenv/; source venv/bin/activate; cd /home/user/scriptlocation/; python expresswayMemorycheck.py'
 
-# To Detach from Screen
+### To Detach from Screen
 
     ctrl+A --> "d"
 
-# To Attach to Screen
+### To Attach to Screen
 
     screen -list
 
@@ -150,7 +150,7 @@ If you require invoking a virtual environment you likely already know how to do 
 
 Finally, we’ll want to take a look at how the data is reported. The email should comain in from “name@domain.com” as configured on your Linux/SMTP — e.g. (LinuxVM1@voip.local), the subject should be “Expressway Healthchecks” and the body will contain the below data. It could be sent as an attachment, however, I did not want to deal with encoding/constructing/composing the email - if a more secure method is desired you may want to do this another way. I was able to set up a rule in Outlook for “Subject Contains” and “Sender Is” to direct it to a new folder.
 
-<span class="image fit"<img src="{{ "/images/sanitizedemail.png" | absolute_url }}" alt="" /></span>
+<span class="image fit"><img src="{{ "/images/sanitizedemail.png" | absolute_url }}" alt="" /></span>
 
 Example Email sent by the Script containing output from Expressway/VCS
 
