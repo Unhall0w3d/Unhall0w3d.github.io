@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Placeholder"
-date:   2017-10-31
-excerpt: "This is a Placeholder excerpt because Ken was lazy."
-image: "/images/pic02.jpg"
+title:  "Automating Memory Checks on Cisco VCS using Python"
+date:   2020-02-12
+excerpt: "This post builds upon the last, introducing improvements to the Expressway Memory Checking script providing true automation, email reporting and surrounding context."
+image: "/images/sanitizedemail.png"
 ---
 
 ## Relevance
