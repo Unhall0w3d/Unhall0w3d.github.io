@@ -4,7 +4,7 @@ bio:                'The NOC Thoughts Blog'
 description:        "The NOC Thoughts Blog"
 locale:             en_US
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://Unhall0w3d.github.io" # the base hostname & protocol for your site
 
 # Comments
 disqus_shortname:   noc-thoughts
