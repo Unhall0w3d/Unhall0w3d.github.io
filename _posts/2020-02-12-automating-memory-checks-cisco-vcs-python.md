@@ -31,7 +31,7 @@ So let’s get into the changes. As always, the script is available on my [GitHu
 
 5) When successfully completed, prior to sleeping, the data is emailed out for review.
 
-```python
+```python{.line-numbers}
 #
 # Script created by Ken Perry
 # Script purpose is to verify memory util on Expressway Servers
