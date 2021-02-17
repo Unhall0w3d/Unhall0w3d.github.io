@@ -119,6 +119,7 @@ while True:
         # os.system('mail -s "Script Stopped" email@domain.com')
     finally:
         time.sleep(43200)
+
 {% endhighlight %}
 
 ## Things to know
