@@ -3,7 +3,6 @@ layout: post
 title:  "Automating Memory Checks on Cisco VCS using Python"
 date:   2020-02-12
 excerpt: "This post builds upon the last, introducing improvements to the Expressway Memory Checking script providing true automation, email reporting and surrounding context."
-image: "/images/sanitizedemail.png"
 ---
 
 ## Relevance
