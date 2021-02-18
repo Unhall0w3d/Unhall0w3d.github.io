@@ -8,6 +8,8 @@ url: "" # the base hostname & protocol for your site
 
 # Comments
 disqus_shortname:   noc-thoughts
+shortname: noc-thoughts
+disqus: noc-thoughts
 
 # Social
 analytics-id:       "UA-30994747-1"
